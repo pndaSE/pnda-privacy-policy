@@ -1,60 +1,644 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Politique de Confidentialité</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-        h1 { color: #2c3e50; }
-        h2 { color: #34495e; }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Politique de confidentialité — PndaPay | PNDA</title>
+<meta name="description" content="Politique de confidentialité de l'application PndaPay, utilisée par le Projet National de Développement Agricole (PNDA) pour le paiement des indemnités d'assurance agricole en République Démocratique du Congo." />
+<meta name="robots" content="index, follow" />
+<style>
+  :root {
+    --encre: #14202e;
+    --encre-douce: #47586b;
+    --trait: #dde4ec;
+    --fond: #f7f9fc;
+    --carte: #ffffff;
+    --accent: #007a5e;
+    --accent-clair: #e6f3ef;
+    --alerte: #b45309;
+    --alerte-clair: #fdf5e6;
+    --mesure: 74ch;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--fond);
+    color: var(--encre);
+    font: 400 17px/1.68 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .bandeau {
+    background: linear-gradient(135deg, #0f3d33, #007a5e 55%, #6aa84f);
+    color: #fff;
+    padding: 40px 24px 34px;
+  }
+  .bandeau-interne { max-width: var(--mesure); margin: 0 auto; }
+  .marque {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    opacity: .92;
+  }
+  .marque span {
+    display: grid; place-items: center;
+    width: 34px; height: 34px; border-radius: 9px;
+    background: rgba(255,255,255,.18); font-size: 11px; letter-spacing: .04em;
+  }
+  h1 { margin: 18px 0 8px; font-size: clamp(26px, 4.5vw, 36px); line-height: 1.2; letter-spacing: -.02em; }
+  .sous-titre { margin: 0; opacity: .93; font-size: 16px; }
+  .dates { margin-top: 18px; font-size: 13.5px; opacity: .88; }
+
+  main { max-width: var(--mesure); margin: 0 auto; padding: 0 24px 72px; }
+
+  .langues {
+    display: flex; gap: 8px; margin: 22px 0 0;
+  }
+  .langues button {
+    font: inherit; font-size: 13px; font-weight: 600;
+    padding: 7px 15px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--trait); background: var(--carte); color: var(--encre-douce);
+  }
+  .langues button[aria-pressed="true"] {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+
+  section { margin-top: 38px; }
+  h2 {
+    font-size: 20px; line-height: 1.3; margin: 0 0 12px;
+    padding-bottom: 9px; border-bottom: 2px solid var(--trait);
+    letter-spacing: -.01em;
+  }
+  h3 { font-size: 16.5px; margin: 24px 0 8px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  a { color: var(--accent); }
+
+  .resume {
+    margin-top: 28px; padding: 20px 22px;
+    background: var(--accent-clair); border-left: 4px solid var(--accent); border-radius: 8px;
+  }
+  .resume p:last-child { margin-bottom: 0; }
+
+  .aremplir {
+    background: var(--alerte-clair);
+    border: 1px dashed var(--alerte);
+    color: var(--alerte);
+    font-weight: 700;
+    padding: 1px 7px; border-radius: 5px;
+    font-size: .93em;
+  }
+
+  .avis {
+    margin-top: 28px; padding: 18px 20px;
+    background: var(--alerte-clair); border-left: 4px solid var(--alerte); border-radius: 8px;
+    font-size: 15px;
+  }
+  .avis strong { color: var(--alerte); }
+
+  table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--trait); vertical-align: top; }
+  th { background: #eef2f7; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--encre-douce); }
+
+  .contact {
+    margin-top: 38px; padding: 22px; background: var(--carte);
+    border: 1px solid var(--trait); border-radius: 10px;
+  }
+
+  footer {
+    border-top: 1px solid var(--trait); background: var(--carte);
+    padding: 26px 24px; font-size: 14px; color: var(--encre-douce);
+  }
+  footer div { max-width: var(--mesure); margin: 0 auto; }
+
+  [lang="en"] { display: none; }
+  body.en [lang="fr"] { display: none; }
+  body.en [lang="en"] { display: block; }
+  body.en li[lang="en"], body.en td[lang="en"], body.en span[lang="en"] { display: revert; }
+
+  @media print {
+    body { background: #fff; font-size: 11pt; }
+    .bandeau { background: none; color: #000; border-bottom: 2px solid #000; padding: 0 0 12px; }
+    .langues, .avis { display: none; }
+    [lang="en"] { display: none !important; }
+    a { color: #000; text-decoration: underline; }
+  }
+</style>
 </head>
 <body>
 
-<h1>Politique de Confidentialité</h1>
-<p>Dernière mise à jour : 2026</p>
+<header class="bandeau">
+  <div class="bandeau-interne">
+    <div class="marque"><span>PNDA</span> Projet National de Développement Agricole</div>
+    <h1 lang="fr">Politique de confidentialité — PndaPay</h1>
+    <h1 lang="en">Privacy Policy — PndaPay</h1>
+    <p class="sous-titre" lang="fr">Application mobile de paiement des indemnités d'assurance agricole · République Démocratique du Congo</p>
+    <p class="sous-titre" lang="en">Mobile application for agricultural insurance payouts · Democratic Republic of the Congo</p>
+    <p class="dates">
+      <span lang="fr">Version 1.0 — En vigueur au <span class="aremplir">[DATE DE PUBLICATION]</span></span>
+      <span lang="en">Version 1.0 — Effective <span class="aremplir">[PUBLICATION DATE]</span></span>
+    </p>
+  </div>
+</header>
 
-<p>Cette politique de confidentialité explique comment l’application <strong>[Nom de ton application]</strong> collecte, utilise et protège les informations des utilisateurs.</p>
+<main>
 
-<h2>1. Données collectées</h2>
-<p>L’application peut collecter les types de données suivants :</p>
-<ul>
-    <li>Données techniques (modèle de téléphone, version Android, logs d’erreurs)</li>
-    <li>Données d’utilisation (fréquence d’utilisation, interactions avec l’application)</li>
-    <li>Données personnelles uniquement si l’utilisateur les fournit volontairement</li>
-</ul>
-<p>Si aucune donnée personnelle n’est collectée, indique simplement :  
-<strong>L’application ne collecte aucune donnée personnelle.</strong></p>
+  <div class="langues" role="group" aria-label="Langue / Language">
+    <button type="button" id="btn-fr" aria-pressed="true">Français</button>
+    <button type="button" id="btn-en" aria-pressed="false">English</button>
+  </div>
 
-<h2>2. Utilisation des données</h2>
-<p>Les données collectées servent uniquement à :</p>
-<ul>
-    <li>Améliorer les performances de l’application</li>
-    <li>Corriger les bugs</li>
-    <li>Assurer le bon fonctionnement des fonctionnalités</li>
-</ul>
+  <div class="avis">
+    <strong lang="fr">À compléter avant publication.</strong>
+    <span lang="fr">Les mentions surlignées en orange doivent être renseignées par le PNDA, puis ce bloc d'avertissement supprimé. Ce document doit être relu par le service juridique du projet avant mise en ligne.</span>
+    <strong lang="en">To be completed before publication.</strong>
+    <span lang="en">The fields highlighted in orange must be filled in by PNDA, then this notice removed. This document must be reviewed by the project's legal department before going live.</span>
+  </div>
 
-<h2>3. Services tiers</h2>
-<p>L’application peut utiliser des services tiers tels que :</p>
-<ul>
-    <li>Google Firebase (Analytics, Crashlytics)</li>
-    <li>Google Sheets API</li>
-</ul>
-<p>Ces services peuvent collecter certaines données techniques conformément à leurs propres politiques de confidentialité.</p>
+  <div class="resume">
+    <p lang="fr"><strong>En résumé.</strong> PndaPay est un outil de travail réservé aux agents du PNDA. Il ne s'adresse pas au grand public et n'affiche aucune publicité. L'application enregistre les paiements d'indemnités versés aux agriculteurs assurés, avec la position GPS et la preuve du versement. Vos données biométriques ne quittent jamais votre téléphone. Aucune donnée n'est vendue ni cédée à des fins commerciales.</p>
+    <p lang="en"><strong>In short.</strong> PndaPay is a work tool reserved for PNDA field agents. It is not intended for the general public and displays no advertising. The app records insurance payouts made to insured farmers, together with GPS location and proof of payment. Your biometric data never leaves your phone. No data is sold or transferred for commercial purposes.</p>
+  </div>
 
-<h2>4. Sécurité</h2>
-<p>Nous mettons en place des mesures raisonnables pour protéger les données contre tout accès non autorisé.</p>
+  <!-- ============================== 1 ============================== -->
+  <section>
+    <h2 lang="fr">1. Qui est responsable de vos données</h2>
+    <h2 lang="en">1. Who is responsible for your data</h2>
 
-<h2>5. Partage des données</h2>
-<p>Les données ne sont jamais vendues ni partagées avec des tiers, sauf si requis par la loi.</p>
+    <p lang="fr">
+      Le responsable du traitement est le <strong>Projet National de Développement Agricole (PNDA)</strong>,
+      placé sous la tutelle du Ministère de l'Agriculture de la République Démocratique du Congo, et financé
+      par la Banque Mondiale.
+    </p>
+    <p lang="en">
+      The data controller is the <strong>Projet National de Développement Agricole (PNDA)</strong>, under the
+      authority of the Ministry of Agriculture of the Democratic Republic of the Congo, funded by the World Bank.
+    </p>
 
-<h2>6. Droits des utilisateurs</h2>
-<p>Les utilisateurs peuvent demander la suppression de leurs données ou obtenir des informations sur leur traitement.</p>
+    <table>
+      <tr>
+        <th lang="fr">Entité</th><th lang="en">Entity</th>
+        <td>Projet National de Développement Agricole (PNDA)</td>
+      </tr>
+      <tr>
+        <th lang="fr">Adresse</th><th lang="en">Address</th>
+        <td><span class="aremplir">[ADRESSE COMPLÈTE DE LA COORDINATION NATIONALE, KINSHASA]</span></td>
+      </tr>
+      <tr>
+        <th lang="fr">Courriel</th><th lang="en">Email</th>
+        <td><span class="aremplir">[ADRESSE COURRIEL DE CONTACT VIE PRIVÉE]</span></td>
+      </tr>
+      <tr>
+        <th lang="fr">Téléphone</th><th lang="en">Phone</th>
+        <td><span class="aremplir">[NUMÉRO DE TÉLÉPHONE]</span></td>
+      </tr>
+      <tr>
+        <th lang="fr">Site</th><th lang="en">Website</th>
+        <td><a href="https://pnda.cd" rel="noopener">pnda.cd</a></td>
+      </tr>
+    </table>
+  </section>
 
-<h2>7. Contact</h2>
-<p>Pour toute question concernant cette politique de confidentialité, contactez :  
-<strong>[Ton email professionnel]</strong></p>
+  <!-- ============================== 2 ============================== -->
+  <section>
+    <h2 lang="fr">2. À qui s'adresse l'application</h2>
+    <h2 lang="en">2. Who the application is for</h2>
+
+    <p lang="fr">
+      PndaPay est un outil professionnel réservé aux agents habilités du PNDA — agents de collecte, opérateurs
+      techniques et responsables provinciaux — chargés de verser les indemnités d'assurance agricole sur le
+      terrain. L'accès requiert un compte créé par un administrateur du projet. L'application n'est pas destinée
+      au grand public, ni aux personnes de moins de 18 ans.
+    </p>
+    <p lang="en">
+      PndaPay is a professional tool reserved for authorised PNDA staff — collection agents, technical operators
+      and provincial officers — responsible for disbursing agricultural insurance payouts in the field. Access
+      requires an account created by a project administrator. The app is not intended for the general public,
+      nor for anyone under 18.
+    </p>
+
+    <p lang="fr">
+      Deux catégories de personnes sont concernées par ce document : les <strong>agents</strong> qui utilisent
+      l'application, et les <strong>agriculteurs bénéficiaires</strong> dont les données sont traitées lors d'un
+      paiement.
+    </p>
+    <p lang="en">
+      Two groups of people are covered by this document: the <strong>agents</strong> who use the app, and the
+      <strong>beneficiary farmers</strong> whose data is processed when a payment is made.
+    </p>
+  </section>
+
+  <!-- ============================== 3 ============================== -->
+  <section>
+    <h2 lang="fr">3. Données traitées et raisons de leur collecte</h2>
+    <h2 lang="en">3. Data processed and why it is collected</h2>
+
+    <h3 lang="fr">3.1 Données des agriculteurs bénéficiaires</h3>
+    <h3 lang="en">3.1 Beneficiary farmer data</h3>
+    <table>
+      <tr>
+        <th lang="fr">Donnée</th><th lang="en">Data</th>
+        <th lang="fr">Pourquoi</th><th lang="en">Purpose</th>
+      </tr>
+      <tr>
+        <td lang="fr">Identifiant au registre national agricole (RNA), nom complet, genre</td>
+        <td lang="en">National agricultural registry (RNA) identifier, full name, gender</td>
+        <td lang="fr">Identifier avec certitude le bénéficiaire d'une indemnité et éviter les doubles paiements</td>
+        <td lang="en">Reliably identify the payout recipient and prevent duplicate payments</td>
+      </tr>
+      <tr>
+        <td lang="fr">Numéro de téléphone</td>
+        <td lang="en">Phone number</td>
+        <td lang="fr">Contacter le bénéficiaire et, le cas échéant, verser l'indemnité par mobile money</td>
+        <td lang="en">Contact the beneficiary and, where applicable, pay via mobile money</td>
+      </tr>
+      <tr>
+        <td lang="fr">Province, territoire, secteur, groupement, village</td>
+        <td lang="en">Province, territory, sector, grouping, village</td>
+        <td lang="fr">Rattacher le paiement à sa zone et permettre le suivi provincial</td>
+        <td lang="en">Attach the payment to its area and enable provincial monitoring</td>
+      </tr>
+      <tr>
+        <td lang="fr">Numéro de carte NFC</td>
+        <td lang="en">NFC card number</td>
+        <td lang="fr">Confirmer l'identité du bénéficiaire au moment du versement par lecture de sa carte</td>
+        <td lang="en">Confirm the beneficiary's identity at payout by reading their card</td>
+      </tr>
+      <tr>
+        <td lang="fr">Culture assurée, saison, montant de l'indemnité</td>
+        <td lang="en">Insured crop, season, payout amount</td>
+        <td lang="fr">Calculer et justifier le montant dû au titre de l'assurance agricole</td>
+        <td lang="en">Calculate and justify the amount due under the agricultural insurance scheme</td>
+      </tr>
+    </table>
+
+    <h3 lang="fr">3.2 Données liées à chaque paiement</h3>
+    <h3 lang="en">3.2 Data attached to each payment</h3>
+    <table>
+      <tr>
+        <th lang="fr">Donnée</th><th lang="en">Data</th>
+        <th lang="fr">Pourquoi</th><th lang="en">Purpose</th>
+      </tr>
+      <tr>
+        <td lang="fr">Position GPS (latitude, longitude) au moment du versement</td>
+        <td lang="en">GPS position (latitude, longitude) at the time of payment</td>
+        <td lang="fr">Attester que le paiement a bien eu lieu sur le terrain, dans la zone concernée. Exigence de contrôle du bailleur.</td>
+        <td lang="en">Evidence that the payment took place in the field, in the relevant area. A funder audit requirement.</td>
+      </tr>
+      <tr>
+        <td lang="fr">Photographie de preuve</td>
+        <td lang="en">Proof photograph</td>
+        <td lang="fr">Documenter la remise effective de l'indemnité</td>
+        <td lang="en">Document that the payout was actually handed over</td>
+      </tr>
+      <tr>
+        <td lang="fr">Signature du bénéficiaire, horodatage</td>
+        <td lang="en">Beneficiary signature, timestamp</td>
+        <td lang="fr">Constituer la preuve de réception opposable en cas de litige</td>
+        <td lang="en">Constitute proof of receipt, enforceable in the event of a dispute</td>
+      </tr>
+      <tr>
+        <td lang="fr">Montant, mode de paiement, statut de la transaction</td>
+        <td lang="en">Amount, payment method, transaction status</td>
+        <td lang="fr">Assurer la traçabilité comptable et le rapprochement financier</td>
+        <td lang="en">Ensure accounting traceability and financial reconciliation</td>
+      </tr>
+    </table>
+
+    <h3 lang="fr">3.3 Données des agents utilisateurs</h3>
+    <h3 lang="en">3.3 Agent user data</h3>
+    <table>
+      <tr>
+        <th lang="fr">Donnée</th><th lang="en">Data</th>
+        <th lang="fr">Pourquoi</th><th lang="en">Purpose</th>
+      </tr>
+      <tr>
+        <td lang="fr">Nom d'utilisateur, province et territoire d'affectation</td>
+        <td lang="en">Username, assigned province and territory</td>
+        <td lang="fr">Attribuer chaque paiement à son auteur et limiter l'accès aux données de sa zone</td>
+        <td lang="en">Attribute each payment to its author and restrict data access to their area</td>
+      </tr>
+      <tr>
+        <td lang="fr">Identifiant de l'appareil, version de l'application</td>
+        <td lang="en">Device identifier, application version</td>
+        <td lang="fr">Diagnostiquer les incidents de synchronisation et révoquer l'accès d'un appareil perdu ou volé</td>
+        <td lang="en">Diagnose synchronisation incidents and revoke access from a lost or stolen device</td>
+      </tr>
+      <tr>
+        <td lang="fr">Journal des actions (connexion, paiement, synchronisation)</td>
+        <td lang="en">Activity log (login, payment, synchronisation)</td>
+        <td lang="fr">Répondre aux obligations d'audit du projet et de son bailleur</td>
+        <td lang="en">Meet the audit obligations of the project and its funder</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ============================== 4 ============================== -->
+  <section>
+    <h2 lang="fr">4. Autorisations demandées sur votre téléphone</h2>
+    <h2 lang="en">4. Permissions requested on your phone</h2>
+
+    <table>
+      <tr>
+        <th lang="fr">Autorisation</th><th lang="en">Permission</th>
+        <th lang="fr">Usage</th><th lang="en">Use</th>
+      </tr>
+      <tr>
+        <td><code>ACCESS_FINE_LOCATION</code><br /><code>ACCESS_COARSE_LOCATION</code></td>
+        <td lang="fr">Enregistrer le lieu du paiement comme preuve. La position n'est relevée qu'au moment d'un versement, jamais en arrière-plan, et l'application ne suit pas les déplacements de l'agent.</td>
+        <td lang="en">Record the payment location as proof. Position is captured only at the moment of a payout, never in the background, and the app does not track the agent's movements.</td>
+      </tr>
+      <tr>
+        <td><code>CAMERA</code></td>
+        <td lang="fr">Photographier la preuve de remise et lire les codes-barres des fiches RNA. Aucune photo n'est prise sans action de l'agent.</td>
+        <td lang="en">Photograph proof of handover and scan RNA barcodes. No photo is taken without agent action.</td>
+      </tr>
+      <tr>
+        <td><code>NFC</code></td>
+        <td lang="fr">Lire l'identifiant de la carte du bénéficiaire pour confirmer son identité.</td>
+        <td lang="en">Read the beneficiary's card identifier to confirm their identity.</td>
+      </tr>
+      <tr>
+        <td><code>USE_BIOMETRIC</code></td>
+        <td lang="fr">Vérifier l'identité de l'agent avant de valider un paiement. Voir la section 5.</td>
+        <td lang="en">Verify the agent's identity before validating a payment. See section 5.</td>
+      </tr>
+      <tr>
+        <td><code>INTERNET</code></td>
+        <td lang="fr">Transmettre les paiements vers la base centrale du projet lorsqu'une connexion est disponible.</td>
+        <td lang="en">Transmit payments to the project's central database when a connection is available.</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ============================== 5 ============================== -->
+  <section>
+    <h2 lang="fr">5. Données biométriques</h2>
+    <h2 lang="en">5. Biometric data</h2>
+
+    <p lang="fr">
+      L'application peut demander une empreinte digitale pour confirmer l'identité de l'agent avant de valider
+      un paiement. Cette vérification est effectuée <strong>entièrement par le système Android</strong>, au moyen
+      du composant de sécurité intégré au téléphone.
+    </p>
+    <p lang="en">
+      The app may request a fingerprint to confirm the agent's identity before validating a payment. This check
+      is performed <strong>entirely by the Android system</strong>, using the phone's built-in security component.
+    </p>
+
+    <p lang="fr">
+      PndaPay <strong>ne voit jamais votre empreinte</strong>, ne la stocke pas, ne la transmet pas et ne peut pas
+      la reconstituer. L'application reçoit uniquement une réponse « vérification réussie » ou « vérification
+      échouée ». Aucune donnée biométrique ne quitte votre téléphone, ni vers le PNDA, ni vers un tiers.
+    </p>
+    <p lang="en">
+      PndaPay <strong>never sees your fingerprint</strong>, does not store it, does not transmit it and cannot
+      reconstruct it. The app receives only a "verification succeeded" or "verification failed" response. No
+      biometric data leaves your phone, neither to PNDA nor to any third party.
+    </p>
+  </section>
+
+  <!-- ============================== 6 ============================== -->
+  <section>
+    <h2 lang="fr">6. Fonctionnement hors ligne</h2>
+    <h2 lang="en">6. Offline operation</h2>
+
+    <p lang="fr">
+      Les zones d'intervention du projet — Kwilu, Kasaï, Kasaï-Central — sont souvent dépourvues de couverture
+      réseau. L'application enregistre donc les paiements <strong>localement sur le téléphone</strong>, puis les
+      transmet à la base centrale dès qu'une connexion redevient disponible.
+    </p>
+    <p lang="en">
+      The project's areas of operation — Kwilu, Kasaï, Kasaï-Central — often lack network coverage. The app
+      therefore stores payments <strong>locally on the phone</strong>, then transmits them to the central database
+      as soon as a connection becomes available.
+    </p>
+
+    <p lang="fr">
+      Tant que la synchronisation n'a pas eu lieu, ces données restent sur l'appareil. C'est pourquoi la perte ou
+      le vol d'un téléphone doit être signalé sans délai à la Coordination Nationale, afin que l'accès de
+      l'appareil soit révoqué.
+    </p>
+    <p lang="en">
+      Until synchronisation occurs, this data remains on the device. This is why the loss or theft of a phone
+      must be reported to the National Coordination without delay, so that the device's access can be revoked.
+    </p>
+  </section>
+
+  <!-- ============================== 7 ============================== -->
+  <section>
+    <h2 lang="fr">7. Avec qui ces données sont partagées</h2>
+    <h2 lang="en">7. Who this data is shared with</h2>
+
+    <p lang="fr">
+      Les données ne sont <strong>ni vendues, ni louées, ni cédées</strong> à des fins commerciales ou
+      publicitaires. L'application ne contient aucune régie publicitaire ni outil de mesure d'audience tiers.
+    </p>
+    <p lang="en">
+      Data is <strong>never sold, rented or transferred</strong> for commercial or advertising purposes. The app
+      contains no advertising network and no third-party analytics.
+    </p>
+
+    <p lang="fr">Les données sont accessibles à :</p>
+    <p lang="en">Data is accessible to:</p>
+    <ul>
+      <li lang="fr">les agents et responsables du PNDA, dans la limite de leur province d'affectation ;</li>
+      <li lang="en">PNDA agents and officers, limited to their assigned province;</li>
+      <li lang="fr">la Coordination Nationale du projet, à Kinshasa, pour le suivi national ;</li>
+      <li lang="en">the project's National Coordination in Kinshasa, for national monitoring;</li>
+      <li lang="fr">le Ministère de l'Agriculture et la Banque Mondiale, dans le cadre de leurs missions de contrôle et d'audit, sous forme agrégée sauf nécessité de vérification ;</li>
+      <li lang="en">the Ministry of Agriculture and the World Bank, for oversight and audit purposes, in aggregated form except where verification requires otherwise;</li>
+      <li lang="fr">l'établissement financier chargé du versement, pour les seules données nécessaires à l'exécution du paiement ;</li>
+      <li lang="en">the financial institution handling disbursement, for the data strictly necessary to execute the payment;</li>
+      <li lang="fr">l'autorité judiciaire, sur réquisition légale.</li>
+      <li lang="en">judicial authorities, upon lawful request.</li>
+    </ul>
+
+    <h3 lang="fr">Sous-traitant technique</h3>
+    <h3 lang="en">Technical processor</h3>
+    <p lang="fr">
+      L'hébergement de la base centrale est assuré par <strong>Supabase</strong>, dont les serveurs sont situés
+      dans l'Union européenne (Francfort, Allemagne). Ce prestataire agit uniquement sur instruction du PNDA et
+      n'exploite pas les données pour son propre compte.
+    </p>
+    <p lang="en">
+      The central database is hosted by <strong>Supabase</strong>, whose servers are located in the European
+      Union (Frankfurt, Germany). This provider acts solely on PNDA's instructions and does not use the data for
+      its own purposes.
+    </p>
+
+    <p lang="fr">
+      Vos données sont donc transférées hors de la République Démocratique du Congo. Ce transfert est nécessaire
+      au fonctionnement du service et s'accompagne de mesures contractuelles et techniques de protection.
+    </p>
+    <p lang="en">
+      Your data is therefore transferred outside the Democratic Republic of the Congo. This transfer is necessary
+      for the service to operate and is accompanied by contractual and technical safeguards.
+    </p>
+  </section>
+
+  <!-- ============================== 8 ============================== -->
+  <section>
+    <h2 lang="fr">8. Durée de conservation</h2>
+    <h2 lang="en">8. Retention period</h2>
+
+    <p lang="fr">
+      Les données de paiement sont conservées pendant <span class="aremplir">[DURÉE — ex. 10 ans]</span> à compter
+      du versement, durée correspondant aux obligations d'archivage comptable et aux exigences d'audit du bailleur.
+    </p>
+    <p lang="en">
+      Payment data is retained for <span class="aremplir">[PERIOD — e.g. 10 years]</span> from the date of
+      disbursement, matching accounting archival obligations and the funder's audit requirements.
+    </p>
+
+    <p lang="fr">
+      Les données enregistrées localement sur un téléphone sont supprimées dès leur synchronisation confirmée
+      avec la base centrale, ou lors de la désinstallation de l'application.
+    </p>
+    <p lang="en">
+      Data stored locally on a phone is deleted once synchronisation with the central database is confirmed, or
+      when the application is uninstalled.
+    </p>
+  </section>
+
+  <!-- ============================== 9 ============================== -->
+  <section>
+    <h2 lang="fr">9. Sécurité</h2>
+    <h2 lang="en">9. Security</h2>
+
+    <ul>
+      <li lang="fr">Les échanges entre l'application et la base centrale sont chiffrés (HTTPS/TLS).</li>
+      <li lang="en">Exchanges between the app and the central database are encrypted (HTTPS/TLS).</li>
+      <li lang="fr">Chaque agent dispose d'une clé d'accès personnelle, révocable immédiatement en cas de perte d'appareil ou de fin de mission.</li>
+      <li lang="en">Each agent holds a personal access key, revocable immediately in case of device loss or end of assignment.</li>
+      <li lang="fr">Les mots de passe ne sont jamais conservés en clair.</li>
+      <li lang="en">Passwords are never stored in clear text.</li>
+      <li lang="fr">L'accès aux données est cloisonné par province : un agent ne consulte que les dossiers de sa zone d'affectation.</li>
+      <li lang="en">Data access is partitioned by province: an agent sees only the records of their assigned area.</li>
+      <li lang="fr">Toutes les opérations sensibles sont journalisées et auditables.</li>
+      <li lang="en">All sensitive operations are logged and auditable.</li>
+    </ul>
+
+    <p lang="fr">
+      Aucun système n'étant infaillible, le PNDA s'engage à informer les personnes concernées et les autorités
+      compétentes en cas de violation de données susceptible de leur porter préjudice.
+    </p>
+    <p lang="en">
+      As no system is infallible, PNDA undertakes to notify affected individuals and the competent authorities in
+      the event of a data breach likely to cause them harm.
+    </p>
+  </section>
+
+  <!-- ============================== 10 ============================== -->
+  <section>
+    <h2 lang="fr">10. Vos droits</h2>
+    <h2 lang="en">10. Your rights</h2>
+
+    <p lang="fr">Toute personne concernée peut demander :</p>
+    <p lang="en">Any person concerned may request:</p>
+    <ul>
+      <li lang="fr">l'accès aux données la concernant ;</li>
+      <li lang="en">access to the data concerning them;</li>
+      <li lang="fr">la rectification d'une information inexacte ;</li>
+      <li lang="en">correction of inaccurate information;</li>
+      <li lang="fr">la suppression des données, sous réserve des obligations légales de conservation comptable ;</li>
+      <li lang="en">deletion of data, subject to statutory accounting retention obligations;</li>
+      <li lang="fr">une explication sur l'usage fait de ses données.</li>
+      <li lang="en">an explanation of how their data is used.</li>
+    </ul>
+
+    <p lang="fr">
+      La demande s'adresse à la Coordination Nationale du PNDA, aux coordonnées indiquées à la section 1, ou
+      auprès de l'Unité Provinciale d'Exécution la plus proche. Une réponse est apportée dans un délai
+      de <span class="aremplir">[DÉLAI — ex. 30 jours]</span>.
+    </p>
+    <p lang="en">
+      Requests should be addressed to PNDA's National Coordination, using the contact details in section 1, or to
+      the nearest Provincial Execution Unit. A response is provided within
+      <span class="aremplir">[PERIOD — e.g. 30 days]</span>.
+    </p>
+
+    <p lang="fr">
+      Un agriculteur bénéficiaire qui ne souhaite pas que sa position soit enregistrée peut le signaler à
+      l'agent : le paiement reste possible, mais devra suivre une procédure de justification différente.
+    </p>
+    <p lang="en">
+      A beneficiary farmer who does not wish their location to be recorded may inform the agent: payment remains
+      possible, but will follow a different justification procedure.
+    </p>
+  </section>
+
+  <!-- ============================== 11 ============================== -->
+  <section>
+    <h2 lang="fr">11. Modifications de cette politique</h2>
+    <h2 lang="en">11. Changes to this policy</h2>
+    <p lang="fr">
+      Toute modification est publiée sur cette page, avec une nouvelle date d'entrée en vigueur. Les changements
+      substantiels sont portés à la connaissance des agents par la Coordination Nationale.
+    </p>
+    <p lang="en">
+      Any change is published on this page with a new effective date. Substantial changes are communicated to
+      agents by the National Coordination.
+    </p>
+  </section>
+
+  <div class="contact">
+    <h3 lang="fr" style="margin-top:0">Nous contacter</h3>
+    <h3 lang="en" style="margin-top:0">Contact us</h3>
+    <p lang="fr">
+      Pour toute question relative à cette politique ou à vos données :<br />
+      <strong>Projet National de Développement Agricole — Coordination Nationale</strong><br />
+      <span class="aremplir">110, Boulevard du 30 juin/Immeuble 110 (5ème étage), Kinshasa-Gombe</span><br />
+      <span class="aremplir">pndardc@gmail.com</span> · <span class="aremplir">+243 (0) 99 99 86 452, +243 (0) 85 90 77 878</span>
+    </p>
+    <p lang="en">
+      For any questions regarding this policy or your personal data:<br />
+      <strong>National Agricultural Development Project — National Coordination</strong><br />
+      <span class="aremplir">110, Boulevard du 30 Juin — Building 110 (5th Floor), Kinshasa-Gombe</span><br />
+      <span class="aremplir">pnda@pnda.cd</span>
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <div>
+    <p lang="fr" style="margin:0">
+      PndaPay est développé pour le Projet National de Développement Agricole (PNDA), sous tutelle du Ministère
+      de l'Agriculture de la République Démocratique du Congo, avec le financement de la Banque Mondiale.
+    </p>
+    <p lang="en" style="margin:0">
+      PndaPay is developed for the Projet National de Développement Agricole (PNDA), under the authority of the
+      Ministry of Agriculture of the Democratic Republic of the Congo, funded by the World Bank.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Bascule de langue. Le contenu des deux langues est présent dans la page :
+  // aucun appel réseau, la politique reste lisible hors ligne et à l'impression.
+  (function () {
+    var fr = document.getElementById("btn-fr");
+    var en = document.getElementById("btn-en");
+
+    function choisir(langue) {
+      document.body.classList.toggle("en", langue === "en");
+      document.documentElement.lang = langue;
+      fr.setAttribute("aria-pressed", String(langue === "fr"));
+      en.setAttribute("aria-pressed", String(langue === "en"));
+    }
+
+    fr.addEventListener("click", function () { choisir("fr"); });
+    en.addEventListener("click", function () { choisir("en"); });
+
+    // Un visiteur anglophone arrive directement dans sa langue.
+    if ((navigator.language || "").toLowerCase().indexOf("en") === 0) choisir("en");
+  })();
+</script>
 
 </body>
 </html>
